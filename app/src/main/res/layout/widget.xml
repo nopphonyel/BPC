@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="utf-8"?>
+    <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        xmlns:card_view="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools" android:layout_width="match_parent"
+        android:layout_height="match_parent" android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:paddingBottom="@dimen/activity_vertical_margin" tools:context=".MainActivity">
+
+        <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_height="wrap_content"
+            android:layout_width="match_parent"
+            android:layout_margin="5dp"
+            card_view:cardCornerRadius="2dp"
+            app:cardElevation="4dp"
+            android:id="@+id/Card">
+
+            <RelativeLayout
+                android:layout_height="wrap_content"
+                android:layout_width="wrap_content"
+                >
+
+                <TextView
+                    android:id="@+id/instruct"
+                    android:text="กรุณาใส่ข้อมูลลงด้านล่างให้ครบถ้วน"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="19dp"
+                    android:paddingLeft="15dp"
+                    android:paddingRight="15dp"
+                    android:paddingTop="15dp"
+                    android:paddingBottom="15dp"
+                    android:textStyle="bold"/>
+
+                <RadioGroup
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/radioGroup"
+                    android:paddingStart="10dp"
+                    android:paddingEnd="0dp"
+                    android:paddingRight="0dp"
+                    android:paddingLeft="10dp"
+                    android:paddingBottom="20dp"
+                    android:layout_below="@+id/instruct"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tickGot"
+                        />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:id="@+id/tickFull" />
+
+                    <RadioButton
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/tickPercent"
+                        android:layout_marginTop="12dp"
+                        android:checked="true" />
+                </RadioGroup>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/got"
+                    android:layout_below="@id/instruct"
+                    android:layout_marginRight="11dp"
+                    android:hint="คะแนนที่ได้"
+                    android:paddingTop="1dp"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    android:layout_toRightOf="@+id/radioGroup"
+                    android:layout_toEndOf="@+id/radioGroup" />
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/full"
+                    android:layout_below="@id/got"
+                    android:layout_marginRight="11dp"
+                    android:paddingTop="7dp"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    android:layout_toRightOf="@+id/radioGroup"
+                    android:layout_toEndOf="@+id/radioGroup"
+                    android:hint="คะแนนเต็ม"/>
+
+                <EditText
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/percent"
+                    android:layout_below="@id/full"
+                    android:layout_marginRight="11dp"
+                    android:paddingTop="7dp"
+                    android:inputType="number|numberSigned|numberDecimal"
+                    android:layout_toRightOf="@+id/radioGroup"
+                    android:layout_toEndOf="@+id/radioGroup"
+                    android:hint="ผลลัพธ์เป็นเปอร์เซนต์"/>
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/clrbtn"
+                    card_view:cardBackgroundColor="#fff1f1f1"
+                    android:layout_below="@+id/percent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:clickable="true"
+                    android:foreground="?android:selectableItemBackground"
+                    android:layout_alignBottom="@+id/btncal"
+                    card_view:cardCornerRadius="7dp"
+                    android:onClick="clr"
+                    app:cardElevation="3sp"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true">
+
+                    <TextView
+                        android:text="Clear"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="17dp"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:layout_below="@+id/percent"
+                        android:layout_alignRight="@+id/percent"
+                        android:layout_alignEnd="@+id/percent" />
+                    </android.support.v7.widget.CardView>
+
+
+                <android.support.v7.widget.CardView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:id="@+id/btncal"
+                    android:layout_below="@+id/percent"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginRight="10dp"
+                    android:layout_marginLeft="10dp"
+                    android:layout_marginBottom="10dp"
+                    android:foreground="?android:selectableItemBackground"
+                    android:layout_toLeftOf="@+id/clrbtn"
+                    android:clickable="true"
+                    android:onClick="calc"
+                    card_view:cardCornerRadius="7dp"
+                    app:cardElevation="3sp"
+                    card_view:cardBackgroundColor="#ff00a116"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true">
+
+                    <LinearLayout android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <TextView
+                            android:text="CALCULATE"
+                            android:textStyle="bold"
+                            android:textSize="17dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="10dp"
+                            android:paddingBottom="10dp"
+                            android:textColor="#ffffffff"
+                            android:padding="10dp"
+                            android:gravity="center" />
+
+                    </LinearLayout>
+                </android.support.v7.widget.CardView>
+
+            </RelativeLayout>
+        </android.support.v7.widget.CardView>
+
+    </RelativeLayout>

@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Basic Percent Calculator</string>
+    <string name="action_settings">ปรับความยาวทศนิยม</string>
+    <string name="title_activity_dialog">dialog</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="ui_selection">เลือกหน้าตาโปรแกรม</string>
+    <string name="about">เกี่ยวกับ</string>
+    <string name="description">โปรแกรมนี้ ใช้ในการคำนวณหาร้อยละอย่างง่าย โดยมีความสามารถในการหาได้ทั้งสามค่าโดยทำการแตะเลือกค่าที่ต้องการหาแล้วใส่ค่าตัวเลขช่องอื่นๆที่เหลือ โปรแกรมนี้ พัฒนาโดย นายนพพล รัตนมณี</string>
+    <string name="title_activity_ui_select">Select UI</string>
+
+</resources>
